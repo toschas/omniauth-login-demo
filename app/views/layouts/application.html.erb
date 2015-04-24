@@ -7,16 +7,16 @@
     <%= csrf_meta_tags %>
 </head>
 <body>
-<div>
+<div class="text-center">
     <% if @current_user %>
         Signed in as <strong><%= @current_user.name %></strong>!
-        <%= link_to 'Sign out', signout_path, id: 'sign_out' %>
+        <%= link_to 'Sign out', signout_path, id: 'sign_out', class: 'btn btn-danger' %>
     <% else %>
-        <%= link_to 'Sign in with Google', '/auth/google_oauth2', id: 'sign_in' %>
+        <%= link_to 'Sign in with Google', '/auth/google_oauth2', id: 'sign_in', class: 'btn btn-primary' %>
     <% end %>
     <hr/>
 </div>
-<div>
+<div class="container">
     <%= yield %>
 </div>
 </body>
