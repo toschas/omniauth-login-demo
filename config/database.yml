@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: omniauth-login-demo_development
+
+test:
+  <<: *default
+  database: omniauth-login-demo_test
+
+production:
+  <<: *default
+  database: omniauth-login-demo_production
+  username: omniauth-login-demo
+  password: <%= ENV['OMNIAUTH_LOGIN_DEMO_PASSWORD'] %>

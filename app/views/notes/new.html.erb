@@ -1,0 +1,20 @@
+<h1>Add a new Note</h1>
+<br/>
+<%= form_for @note do |form| %>
+
+    <p>
+        <%= form.label :text, 'Note text:' %>
+        <%= form.text_field :text %>
+    </p>
+
+    <% if @note.errors[:text].any? %>
+        <p class='error-messages'>
+            <%= @note.errors[:text].to_sentence %>
+        </p>
+    <% end %>
+
+    <p class='buttons'>
+        <%= form.submit 'Add note' %>
+    </p>
+
+<% end %>

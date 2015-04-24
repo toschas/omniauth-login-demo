@@ -1,0 +1,12 @@
+<h2>Notes</h2>
+<h4><%= link_to 'New note', new_note_path, id: 'new_note' %></h4>
+<div id="notes">
+    <ul>
+        <% @notes.each do |note| %>
+            <li><%= link_to note.text.truncate(30, separator: ' '), note_path(note) %></li>
+        <% end %>
+    </ul>
+</div>
+<% if flash[:alert] %>
+    <div class="alert"><%= flash[:alert] %></div>
+<% end %>

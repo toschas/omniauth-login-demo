@@ -1,0 +1,4 @@
+production:
+  CLIENT_ID: 376375345057-epilr4q3tpvolv4381fl7919lh3qdo6d.apps.googleusercontent.com
+  CLIENT_SECRET: 2HiS88PLD0BE6165xMbAUIug
+  OMNIAUTH_LOGIN_DEMO_PASSWORD: H@E[3t&kSnBxPG8e
